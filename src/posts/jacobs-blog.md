@@ -1,5 +1,5 @@
 ---
-title: Jacob's blog
+title: Jacob's edited blog
 description: A description for the blog that Jacob has written
 author: Jacob
 date: 2021-09-20T17:18:27.252Z
