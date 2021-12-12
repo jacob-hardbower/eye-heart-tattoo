@@ -7,20 +7,63 @@ layout: default
   <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-b from-aqua-darker to-steel"></div>
   <div class="relative max-w-7xl mx-auto sm:flex overflow-hidden rounded-2xl bg-white">
     <div class="rounded-2xl mx-auto sm:rounded-none w-1/2 overflow-hidden">
-      <img src="/static/img/contact-us.jpg" alt="Shop desk and lounge area" class="object-cover w-full h-full lg:max-h-[500px]">
+      <img src="/static/img/contact-us.jpg" alt="Shop desk and lounge area" class="object-cover w-full h-full">
     </div>
     <div class="text-center sm:text-left p-12 sm:w-1/2">
       <h1 class="font-subheading text-3xl sm:text-5xl text-sunset">Book a Consult</h1>
-      <form action="https://usebasin.com/f/50a967c3162b">
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <div class="mt-1">
-            <input type="email" name="email" id="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">
-          </div>
+      <p class="font-handwriting uppercase">Submit the following information and we will reach out shortly with a response and/or request for reference imagery. Thank you!</p>
+      <form action="https://usebasin.com/f/50a967c3162b" method="POST" id="my-contact-form" class="mt-6 text-left">
+        <label for="name" class="block text-sm mt-4 font-subheading text-sunset">Name</label>
+        <div class="mt-1">
+          <input required type="text" name="name" id="name" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
         </div>
-        <button>Submit</button>
-      </form>
-      </div>
+        <label for="email" class="block text-sm font-subheading text-sunset mt-4">Email</label>
+        <div class="mt-1">
+          <input required type="email" name="email" id="email" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+        </div>
+        <label for="phone" class="block text-sm font-subheading text-sunset mt-4">Phone</label>
+        <div class="mt-1">
+          <input required type="text" name="phone" id="phone" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+        </div>
+        <div>
+          <label for="artist" class="block text-sm font-subheading text-sunset mt-4">Preferred Artist</label>
+          <select id="artist" name="preferred_artist" class="mt-1 block w-full pl-3 font-bold pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-bush focus:border-bush sm:text-sm rounded-md">
+            <option selected>None</option>
+            <option>Donovan Marlow</option>
+            <option>Joe Almquist</option>
+            <option>Marco Sullivan</option>
+            <option>Scott Denhalter</option>
+          </select>
+        </div>
+        <label for="message" class="block text-sm font-subheading text-sunset mt-4">Brief description of work to be done</label>
+        <div class="mt-1">
+          <textarea name="message" id="message" cols="30" rows="4" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+        </div>
+        <div class="flex gap-x-4 mt-6 items-center">
+          <button type="submit" class="whitespace-nowrap font-handwriting uppercase inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sunset hover:bg-sunset-dark">Submit</button>
+          <div class="font-subheading text-bush" id="form-message"></div>
+        </div>
+        </form>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  var form = document.getElementById("my-contact-form");
+  var formMessage = document.getElementById("form-message");
+  form.onsubmit = function (event) {
+    event.preventDefault();
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action, true);
+    xhr.onload = function (e) {
+      console.log(xhr);
+      if (xhr.status === 200) {
+        formMessage.innerHTML = "Success!";
+      } else {
+        formMessage.innerHTML = "Error: " + response.error;
+      }
+    };
+    xhr.send(formData);
+  };
+</script>
