@@ -12,10 +12,14 @@
     </div>
     <div class="bg-white md:bg-transparent px-4 sm:px-6 lg:px-8 relative">
       <h1 class="font-subheading mt-8 text-3xl sm:text-5xl md:text-aqua-darkest lg:text-7xl">{% block title %}{% endblock %}</h1>
-      <div class="bg-white rounded-xl overflow-hidden prose mt-6 md:-ml-52 md:p-8">
-        {% block text %}{% endblock %}
+      <div class="bg-white rounded-xl overflow-hidden mt-6 md:-ml-52 md:p-8">
+        <div class="prose">
+          {% block text %}{% endblock %}
+        </div>
+        {% block gallery %}{% endblock %}
       </div>
     </div>
   </div>
 </div>
+{% block script %}{% endblock %}
 {% endblock %}

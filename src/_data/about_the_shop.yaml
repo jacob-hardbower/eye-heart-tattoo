@@ -6,3 +6,10 @@ content: Eye Heart Tattoo is Raleigh’s premier tattoo studio. Located in
   for you that is timeless with the blending of past traditions and modern
   flare. Our shop provides a comfortable, welcoming environment that is
   committed to delivering a safe and respectful tattoo process.
+galleryImages:
+  - image: /static/img/shop-entry.jpg
+  - image: /static/img/shop-lounge.jpg
+  - image: /static/img/shop-wide.jpg
+  - image: /static/img/shop-art-wall.jpg
+  - image: /static/img/shop-joes-workstation.jpg
+  - image: /static/img/shop-store.jpg

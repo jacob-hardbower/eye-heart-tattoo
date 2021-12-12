@@ -2,4 +2,33 @@
 
 {% block title %}{{ about_the_shop.title }}{% endblock %}
 {% block image %}<img src="/static/img/joes-workspace.jpg" alt="Joe Almquist's tattoo station" class="object-cover w-full h-full object-center">{% endblock %}
-{% block text %}{{ about_the_shop.content }}{% endblock %}
+{% block text %}
+  {{ about_the_shop.content }}
+{% endblock %}
+{% block gallery %}
+<button onclick="openGallery()" class="whitespace-nowrap font-handwriting uppercase inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sunset hover:bg-sunset-dark mt-6">
+  See gallery
+</button>
+<div class="gallery-section">
+  <ul class="gallery hidden">
+    {% for item in about_the_shop.galleryImages %}
+    <li class="gallery-slide">
+      <img src="{{ item.image }}" alt="Tattoo by Joe Almquist">
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+{% block script %}
+<script src="/static/js/flickity.js"></script>
+<script>
+  const slider = new Flickity( '.gallery', {
+    fullscreen: true,
+    cellAlign: 'left',
+    contain: true
+  });
+  function openGallery() {
+    slider.viewFullscreen()
+  }
+</script>
+{% endblock %}

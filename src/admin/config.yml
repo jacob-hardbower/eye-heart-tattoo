@@ -66,6 +66,11 @@ collections:
           - label: "Content"
             name: content
             widget: markdown
+          - label: "Gallery"
+            name: "galleryImages"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
       - label: "Tattoo Care"
         name: care
         file: "src/_data/tattoo_care.yaml"
