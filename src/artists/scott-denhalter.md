@@ -1,0 +1,12 @@
+---
+name: Scott Denhalter
+role: Tattoo Artist
+photo: /static/img/scott-denhalter-square.jpg
+bio: Scott started tattooing in 2007 and has worked in several parts of North
+  Carolina, Florida and Ohio, as well has traveled across the east coast. Scott
+  is know for his bold traditional tattoos and black and grey. Coming up working
+  busy walk in shops has made Scott a well rounded tattooed ready to handle just
+  about anything that comes through the door.
+instagram: scottdenhalter
+email: scottdenhalter@gmail.com
+---

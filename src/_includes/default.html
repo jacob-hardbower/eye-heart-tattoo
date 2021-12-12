@@ -12,16 +12,19 @@
     {% endif %}
     {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,700;1,700&family=Baloo+2:wght@500;600;700;800&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Concert+One&family=Delius+Unicase:wght@700&family=Mali:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Noto+Sans:wght@400;700&family=Sniglet&display=swap" rel="stylesheet">
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    <div class="bg-aqua antialiased">
+      {% include "./partials/navbar.html" %}
 
-    {{ content | safe }}
+      {{ content | safe }}
 
-    {% include "./partials/footer.html" %}
+      {% include "./partials/footer.html" %}
+    </div>
 
     <script src="/static/js/alpine.js"></script>
 

@@ -9,10 +9,9 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true)
 
-  // human readable date
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "dd LLL yyyy"
+  eleventyConfig.addShortcode("thisYear", function() {
+    return DateTime.fromJSDate(new Date(), { zone: "utc" }).toFormat(
+      "yyyy"
     )
   })
 
@@ -29,6 +28,8 @@ module.exports = function (eleventyConfig) {
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img")
+
+  eleventyConfig.addPassthroughCopy("./src/static/fonts")
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico")

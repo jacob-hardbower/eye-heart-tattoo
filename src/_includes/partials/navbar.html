@@ -1,33 +1,156 @@
-<div class="{{ 'lg:fixed' if path == 'home' }} w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
-        <!--Logo etc-->
-        <div class="flex items-center">
-            <a href="/" class="text-indigo-500 font-bold text-lg">
-                Logo</a>
-        </div>
+<script type="module">
+  import { createApp, reactive } from "https://unpkg.com/petite-vue?module"
 
-        <!--Toggle button (hidden on large screens)-->
-        <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
-            <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
-                <path x-show="isOpen" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-                <path x-show="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-            </svg>
+  const store = reactive({
+    open: false,
+    menuOpen: false,
+  })
+
+  createApp({
+    ...store
+  }).mount()
+</script>
+
+<header v-scope>
+  <div class="relative bg-white sm:bg-aqua">
+    <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+      <div class="flex justify-start lg:w-0 lg:flex-1">
+        <a href="#">
+          <span class="sr-only">Workflow</span>
+          <img class="h-10 sm:h-16 w-auto" src="./static/img/logo-dice-eye-heart-tattoo.png" alt="Eye Heart Tattoo logo">
+        </a>
+      </div>
+      <div class="-mr-2 -my-2 md:hidden">
+        <button @click="menuOpen = true" type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-aqua-darkest focus:outline-none focus:ring-2 focus:ring-inset focus:ring-bush" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+          <!-- Heroicon name: outline/menu -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
         </button>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="text-lg font-handwriting uppercase px-2 text-aqua-darkest hover:text-gray-200">
+          Home
+        </a>
 
-        <!--Menu-->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
+        <div class="relative">
+          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+          <button @click="open = !open" type="button" class="text-aqua-darkest px-2 group rounded-md inline-flex items-center text-lg font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bush" aria-expanded="true">
+            <span class="font-handwriting uppercase">Artists</span>
+            <!--
+              Heroicon name: solid/chevron-down
 
-            {% if navigation.items %}
+              Item active: "text-gray-600", Item inactive: "text-gray-400"
+            -->
+            <svg class="text-aqua-dark ml-2 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
 
-                <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
-                    {% for item in navigation.items %}
-                        <li class="nav__item mr-3">
-                            <a @click="isOpen = false" class="text-ml inline-block text-gray-500 no-underline hover:text-indigo-500 py-2 px-4" href="{{ item.url }}">{{ item.text }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-
-            {% endif %}
+          <div v-if="open" class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                {% for artist in collections.artists %}
+                  <a href="{{artist.url}}" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-md overflow-hidden sm:h-12 sm:w-12 relative">
+                      <img class="object-cover w-full h-full" src="{{ artist.data.photo }}" alt="Headshot photo of {{ artist.data.name }}">
+                    </div>
+                    <div class="ml-4">
+                      <p class="font-subheading text-aqua-dark">
+                        {{ artist.data.name }}
+                      </p>
+                      <p class="text-xs font-bold font-handwriting uppercase text-aqua-darker">
+                        {{ artist.data.role }}
+                      </p>
+                    </div>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
         </div>
-    </nav>
-</div>
+
+        <a href="#" class="text-lg font-handwriting uppercase px-2 text-aqua-darkest hover:text-gray-200">
+          The Shop
+        </a>
+
+        <a href="#" class="text-lg font-handwriting uppercase px-2 text-aqua-darkest hover:text-gray-200">
+          Contact
+        </a>
+
+      </nav>
+      <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+        <a href="#" class="ml-8 whitespace-nowrap transform rotate-6 font-handwriting uppercase inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sunset hover:bg-sunset-dark">
+          Book now
+        </a>
+      </div>
+    </div>
+
+    <!--
+      Mobile menu, show/hide based on mobile menu state.
+
+      Entering: "duration-200 ease-out"
+        From: "opacity-0 scale-95"
+        To: "opacity-100 scale-100"
+      Leaving: "duration-100 ease-in"
+        From: "opacity-100 scale-100"
+        To: "opacity-0 scale-95"
+    -->
+    <div v-if="menuOpen" class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+      <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-aqua divide-y-2 divide-gray-50">
+        <div class="pt-5 pb-6 px-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <img class="h-14 w-auto" src="./static/img/logo-dice-eye-heart-tattoo.png" alt="Eye Heart Tattoo logo">
+            </div>
+            <div class="-mr-2">
+              <button @click="menuOpen = false" type="button" class="bg-aqua rounded-md p-2 inline-flex items-center justify-center text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-bush">
+                <span class="sr-only">Close menu</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="mt-6">
+            <nav class="grid grid-cols-1 gap-7">
+
+              {% for artist in collections.artists %}
+                <a href="{{artist.url}}" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 text-white hover:text-aqua-dark">
+                  <div class="flex-shrink-0 h-10 w-10 rounded-md overflow-hidden sm:h-12 sm:w-12 relative">
+                    <img class="object-cover w-full h-full" src="{{ artist.data.photo }}" alt="Headshot photo of {{ artist.data.name }}">
+                  </div>
+                  <div class="ml-4 text-base font-subheading uppercase">
+                    {{ artist.data.name }}
+                  </div>
+                </a>
+              {% endfor %}
+            </nav>
+          </div>
+        </div>
+        <div class="py-6 px-5">
+          <div class="grid grid-cols-2 gap-4">
+            <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
+              Home
+            </a>
+
+            <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
+              The Shop
+            </a>
+
+            <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
+              Contact
+            </a>
+          </div>
+          <div class="mt-6">
+            <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md font-handwriting uppercase font-medium text-white bg-sunset-dark">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

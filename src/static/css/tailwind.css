@@ -2,19 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/*Your Custom CSS Goes here*/
-
-h1 {
-  @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
-}
-
-h3 {
-  @apply text-2xl font-bold mb-3;
-}
-
-/* Syntax Highlighting*/
-
-body :not(pre) > code[class*="language-"],
-body pre[class*="language-"] {
-  @apply bg-gray-800;
+@layer base {
+  @font-face {
+    font-family: 'Brannt Chiseled';
+    src:
+      local(''),
+      url(../fonts/brannt-chiseled.woff2) format('woff2'),
+      url(../fonts/brannt-chiseled.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Brannt';
+    src:
+      local(''),
+      url(../fonts/brannt.woff2) format('woff2'),
+      url(../fonts/brannt.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/itim.woff2') format('woff2'),
+        url('../fonts/itim.woff') format('woff');
+  }
 }
