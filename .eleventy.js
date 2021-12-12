@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/img")
   eleventyConfig.addPassthroughCopy("./src/static/js")
   eleventyConfig.addPassthroughCopy("./src/static/fonts")
+  eleventyConfig.addPassthroughCopy("./src/static/css/flickity.css")
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico")
