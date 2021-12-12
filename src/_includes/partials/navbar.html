@@ -3,7 +3,8 @@
 
   const store = reactive({
     open: false,
-    menuOpen: false,
+    aboutOpen: false,
+    menuOpen: false
   })
 
   createApp({
@@ -36,7 +37,7 @@
 
         <div class="relative">
           <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-          <button @click="open = !open" type="button" class="text-aqua-darkest px-2 group rounded-md inline-flex items-center text-lg font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bush" aria-expanded="true">
+          <button @click="open = !open; aboutOpen = false" type="button" class="text-aqua-darkest px-2 group rounded-md inline-flex items-center text-lg font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bush" aria-expanded="true">
             <span class="font-handwriting uppercase">Artists</span>
             <!--
               Heroicon name: solid/chevron-down
@@ -71,9 +72,57 @@
           </div>
         </div>
 
-        <a href="#" class="text-lg font-handwriting uppercase px-2 text-aqua-darkest hover:text-gray-200">
-          The Shop
-        </a>
+        <div class="relative">
+          <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+          <button @click="aboutOpen = !aboutOpen; open = false" type="button" class="text-aqua-darkest px-2 group rounded-md inline-flex items-center text-lg font-medium hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bush" aria-expanded="true">
+            <span class="font-handwriting uppercase">About</span>
+            <!--
+              Heroicon name: solid/chevron-down
+
+              Item active: "text-gray-600", Item inactive: "text-gray-400"
+            -->
+            <svg class="text-aqua-dark ml-2 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <div v-if="aboutOpen" class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-sm lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+            <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                <a href="{{artist.url}}" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                  <div class="ml-4">
+                    <p class="font-subheading text-aqua-dark">
+                      The Shop
+                    </p>
+                    <p class="text-xs font-bold font-handwriting uppercase text-aqua-darker">
+                      History and photos
+                    </p>
+                  </div>
+                </a>
+                <a href="{{artist.url}}" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                  <div class="ml-4">
+                    <p class="font-subheading text-aqua-dark">
+                      Client Expectations
+                    </p>
+                    <p class="text-xs font-bold font-handwriting uppercase text-aqua-darker">
+                      Ensuring your safety and comfort
+                    </p>
+                  </div>
+                </a>
+                <a href="{{artist.url}}" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                  <div class="ml-4">
+                    <p class="font-subheading text-aqua-dark">
+                      Tattoo Care
+                    </p>
+                    <p class="text-xs font-bold font-handwriting uppercase text-aqua-darker">
+                      Making your ink last
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <a href="#" class="text-lg font-handwriting uppercase px-2 text-aqua-darkest hover:text-gray-200">
           Contact
@@ -115,8 +164,8 @@
             </div>
           </div>
           <div class="mt-6">
+            <p class="">Artists</p>
             <nav class="grid grid-cols-1 gap-7">
-
               {% for artist in collections.artists %}
                 <a href="{{artist.url}}" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 text-white hover:text-aqua-dark">
                   <div class="flex-shrink-0 h-10 w-10 rounded-md overflow-hidden sm:h-12 sm:w-12 relative">
@@ -138,6 +187,14 @@
 
             <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
               The Shop
+            </a>
+
+            <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
+              Client Expectations
+            </a>
+
+            <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
+              Tattoo Care
             </a>
 
             <a href="#" class="text-base font-bold font-handwriting uppercase text-gray-900 hover:text-gray-700">
