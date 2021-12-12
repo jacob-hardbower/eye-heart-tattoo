@@ -45,7 +45,6 @@ module.exports = {
       fontFamily: {
         'heading': ['Brannt Chiseled', 'Helvetica', 'Arial', 'sans-serif' ],
         'subheading': ['Brannt', 'Helvetica', 'Arial', 'sans-serif' ],
-        // 'handwriting': ["'Baloo 2'", 'cursive']
         'handwriting': ['Delius Unicase', 'cursive'],
         'sans': ['Noto Sans', 'sans-serif']
       }

@@ -18,11 +18,28 @@
       url(../fonts/brannt.woff) format('woff');
   }
   @font-face {
-    font-family: 'Itim';
+    font-family: 'Delius Unicase';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/delius-unicase.woff2') format('woff2'),
+        url('../fonts/delius-unicase.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
     src: local(''),
-        url('../fonts/itim.woff2') format('woff2'),
-        url('../fonts/itim.woff') format('woff');
+        url('../fonts/noto-sans-v21-latin-regular.woff2') format('woff2'),
+        url('../fonts/noto-sans-v21-latin-regular.woff') format('woff');
+  }
+  /* noto-sans-700 - latin */
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/noto-sans-v21-latin-700.woff2') format('woff2'),
+        url('../fonts/noto-sans-v21-latin-700.woff') format('woff');
   }
 }
