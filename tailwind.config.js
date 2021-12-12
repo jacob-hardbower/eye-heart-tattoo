@@ -54,6 +54,7 @@ module.exports = {
   variants: {},
   plugins: [
     require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
     plugin(({ addUtilities, theme, config, e }) => {
       addUtilities(
         Object.entries(theme('spacing')).map(([variant, space]) => ({
