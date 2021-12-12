@@ -9,4 +9,5 @@ bio: Scott started tattooing in 2007 and has worked in several parts of North
   about anything that comes through the door.
 instagram: scottdenhalter
 email: scottdenhalter@gmail.com
+order: 4
 ---
