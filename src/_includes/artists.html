@@ -2,6 +2,11 @@
 layout: default
 ---
 
+{% block meta %}
+<title>{{ name }} - Eye Heart Tattoo</title>
+<meta name="description" content="{{ bio }}"/>
+{% endblock %}
+
 <div class="relative px-4 sm:px-6 lg:px-8 bg-white sm:bg-aqua">
   <div class="absolute inset-x-0 bottom-0 h-3/5 bg-aqua-darker"></div>
   <div class="relative max-w-7xl mx-auto sm:flex overflow-hidden rounded-2xl bg-white">

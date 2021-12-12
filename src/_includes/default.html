@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    {% block head %}{% endblock %}
+    {% if title %}<title>{{title}}</title>{% endif %}
+    {% if description %}<meta name="description" content="{{description}}"/>{% endif %}
+
+    {% block meta %}{% endblock %}
+
+    <meta name="theme-color" content="#E05745" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://eyehearttattoo.com">
+    <meta name="twitter:image:src" content="https://eyehearttattoo.com/static/img/meta.png">
+
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/flickity.css"/>
 

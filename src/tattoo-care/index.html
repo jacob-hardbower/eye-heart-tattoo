@@ -1,5 +1,10 @@
 {% extends "../_includes/page.html" %}
 
+{% block meta %}
+  <title>{{ tattoo_care.title }} - Eye Heart Tattoo</title>
+  <meta name="description" content="Helpful information for keeping your tattoos looking great."/>
+{% endblock %}
+
 {% block title %}{{ tattoo_care.title }}{% endblock %}
 {% block image %}<img src="/static/img/shop-interior-2.jpg" alt="Wooden doors mark the entryway into Eye Heart Tattoo" class="object-cover w-full h-full object-center">{% endblock %}
 {% block text %}{{ tattoo_care.content | markdownIt | safe }}{% endblock %}

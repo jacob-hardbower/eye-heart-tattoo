@@ -1,5 +1,8 @@
 {% extends "../_includes/page.html" %}
-
+{% block meta %}
+  <title>{{ expectations.title }} - Eye Heart Tattoo</title>
+  <meta name="description" content="Your safety, privacy and consent should always be respected when choosing your tattoo artist and studio."/>
+{% endblock %}
 {% block title %}{{ expectations.title }}{% endblock %}
 {% block image %}<img src="/static/img/shop-door.jpg" alt="Wooden doors mark the entryway into Eye Heart Tattoo" class="object-cover w-full h-full object-center">{% endblock %}
 {% block text %}{{ expectations.content | markdownIt | safe }}{% endblock %}

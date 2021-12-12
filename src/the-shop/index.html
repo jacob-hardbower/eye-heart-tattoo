@@ -1,5 +1,10 @@
 {% extends "../_includes/page.html" %}
 
+{% block meta %}
+  <title>{{ about_the_shop.title }} - Eye Heart Tattoo</title>
+  <meta name="description" content="Located in downtown Raleigh, Eye Heart Tattoo features some of the most talented and sought after artist in the area."/>
+{% endblock %}
+
 {% block title %}{{ about_the_shop.title }}{% endblock %}
 {% block image %}<img src="/static/img/joes-workspace.jpg" alt="Joe Almquist's tattoo station" class="object-cover w-full h-full object-center">{% endblock %}
 {% block text %}
