@@ -9,5 +9,13 @@ bio: Scott started tattooing in 2007 and has worked in several parts of North
   about anything that comes through the door.
 instagram: scottdenhalter
 email: scottdenhalter@gmail.com
+galleryImages:
+  - image: /static/img/scott-floral-sleeve-tattoo.jpg
+  - image: /static/img/scott-horse-tattoo.jpg
+  - image: /static/img/scott-knife-moon-tattoo.jpg
+  - image: /static/img/scott-knife-tattoo.jpg
+  - image: /static/img/scott-manga-sleeve.jpg
+  - image: /static/img/scott-cardinal-tattoo.jpg
+  - image: /static/img/scott-panther-tattoo.jpg
 order: 4
 ---

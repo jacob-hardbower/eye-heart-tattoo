@@ -25,6 +25,11 @@ collections:
       - { label: "Bio", name: "bio", widget: "text", required: false }
       - { label: "Instagram", name: "instagram", widget: "string" }
       - { label: "Email", name: "email", widget: "string" }
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
       - { label: "Order", name: "order", widget: "number" }
   - label: "Pages"
     name: "pages"
@@ -41,6 +46,36 @@ collections:
           - label: "Artists description"
             name: artists
             widget: text
+      - label: "Client Expectations"
+        name: expectations
+        file: "src/_data/expectations.yaml"
+        fields:
+          - label: "Page Title"
+            name: title
+            widget: string
+          - label: "Content"
+            name: content
+            widget: markdown
+      - label: "About the Shop"
+        name: about
+        file: "src/_data/about-the-shop.yaml"
+        fields:
+          - label: "Page Title"
+            name: title
+            widget: string
+          - label: "Content"
+            name: content
+            widget: markdown
+      - label: "Tattoo Care"
+        name: care
+        file: "src/_data/tattoo-care.yaml"
+        fields:
+          - label: "Page Title"
+            name: title
+            widget: string
+          - label: "Content"
+            name: content
+            widget: markdown
   - label: "Settings"
     name: "settings"
     editor:

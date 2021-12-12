@@ -9,5 +9,10 @@ bio: "Marco began tattooing in raleigh in 1997. He has done extensive traveling
   and Polynesian. "
 instagram: sugarfreesharko73
 email: sugarfreesharko73@gmail.com
+galleryImages:
+  - image: /static/img/marco-leg-tattoo.jpg
+  - image: /static/img/marco-vase-tattoo.jpg
+  - image: /static/img/marco-maul-tattoo.jpg
+  - image: /static/img/marco-leia-tattoo.jpg
 order: 3
 ---

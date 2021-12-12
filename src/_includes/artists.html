@@ -2,6 +2,54 @@
 layout: default
 ---
 
-<div class="container max-w-4xl mt-6  px-6">
-    artist stuff here
+<div class="relative px-4 sm:px-6 lg:px-8 bg-white sm:bg-aqua">
+  <div class="absolute inset-x-0 bottom-0 h-3/5 bg-aqua-darker"></div>
+  <div class="relative max-w-7xl mx-auto sm:flex overflow-hidden rounded-2xl bg-white">
+    <div class="rounded-2xl mx-auto sm:rounded-none w-1/2 overflow-hidden">
+      <img src="{{ photo }}" alt="Headshot photo of {{ name }}" class="object-cover w-full h-full lg:max-h-[500px]">
+    </div>
+    <div class="text-center sm:text-left p-12">
+      <h1 class="font-subheading text-5xl text-sunset">{{ name }}</h1>
+      <p class="font-handwriting uppercase font-bold text-lg">{{ role }}</p>
+      <div class="flex space-x-1 -ml-2 mt-3 items-center justify-center sm:justify-start">
+        <a href="https://instagram.com/{{ instagram }}" target="_blank" class="inline-block text-bush hover:text-bush-dark transition-all p-2">
+          <span class="sr-only">Instagram</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+          </svg>
+        </a>
+        <a href="mailto:{{ email }}" target="_blank" class="inline-block text-bush hover:text-bush-dark transition-all p-2">
+          <span class="sr-only">Email</span>
+          <svg class="w-6 h-6" fill="currentColor" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+          </svg>
+        </a>
+        <a href="" class="block font-handwriting uppercase text-bush p-2 hover:text-bush-dark transition-all group">Book Now <span class="transform transition-all group-hover:ml-4">&rarr;</span></a>
+      </div>
+      <div class="prose font-bold leading-8 text-md mt-3">
+        {{ bio }}
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="bg-gradient-to-b from-aqua-darker to-steel pb-20 md:pb-60 sm:bg-transparent relative px-4 pt-20 sm:px-6 lg:px-8">
+  <div class="gallery-section">
+    <ul class="gallery">
+      {% for item in galleryImages %}
+      <li class="gallery-slide">
+        <img src="{{ item.image }}" alt="Tattoo by Joe Almquist">
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script src="/static/js/flickity.js"></script>
+<script>
+  const slider = new Flickity( '.gallery', {
+    fullscreen: true,
+    cellAlign: 'left',
+    contain: true
+  });
+</script>

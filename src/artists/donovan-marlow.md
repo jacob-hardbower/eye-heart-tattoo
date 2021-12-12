@@ -8,5 +8,11 @@ bio: Donovan started tattooing in 2013. He’s tattooed full time between north
   grey.
 instagram: donovanmarlow
 email: donovanmarlow@gmail.com
+galleryImages:
+  - image: /static/img/donovan-back-tattoo.jpg
+  - image: /static/img/donovan-big-cat-tattoo.jpg
+  - image: /static/img/donovan-face-tattoo.jpg
+  - image: /static/img/donovan-lighthouse-tattoo.jpg
+  - image: /static/img/donovan-phoenix-tattoo.jpg
 order: 2
 ---
