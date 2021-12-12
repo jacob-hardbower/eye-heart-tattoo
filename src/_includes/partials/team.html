@@ -8,7 +8,7 @@
       </div>
       <div class="lg:col-span-2">
         <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8">
-          {% for artist in collections.artists %}
+          {% for artist in collections.artists | sortedArtists %}
             <li>
               <a href="{{artist.url}}" class="block aspect-w-3 aspect-h-2 mb-4">
                 <img class="object-cover rounded-lg" src="{{ artist.data.photo }}" alt="">

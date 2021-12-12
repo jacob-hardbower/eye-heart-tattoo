@@ -26,6 +26,12 @@ module.exports = function (eleventyConfig) {
     "./src/admin/config.yml": "./admin/config.yml"
   })
 
+  eleventyConfig.addFilter("sortedArtists", function(artists) {
+    return artists.sort((a,b) => {
+      return a.data.order - b.data.order
+    })
+  });
+
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img")
 

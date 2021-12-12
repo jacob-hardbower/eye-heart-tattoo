@@ -8,5 +8,5 @@ bio: Joe has been tattooing since 2007. He has spent most of his career working
   traditional designs in both one shot and large scale form
 instagram: joe.almquist.tattoo
 email: joealmquist.tattoos@gmail.com
-order: 6
+order: 1
 ---
