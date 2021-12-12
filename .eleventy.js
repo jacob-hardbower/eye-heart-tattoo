@@ -1,10 +1,16 @@
 const yaml = require("js-yaml")
 const { DateTime } = require("luxon")
 const htmlmin = require("html-minifier")
+const MarkdownIt = require("markdown-it")
+const mdRender = new MarkdownIt()
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false)
+
+  eleventyConfig.addFilter("markdownIt", function(rawString) {
+    return mdRender.render(rawString)
+  })
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true)

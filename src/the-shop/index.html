@@ -1,6 +1,5 @@
----
-title: The Shop
-layout: default
----
+{% extends "../_includes/page.html" %}
 
-About the Shop
+{% block title %}{{ about_the_shop.title }}{% endblock %}
+{% block image %}<img src="/static/img/joes-workspace.jpg" alt="Joe Almquist's tattoo station" class="object-cover w-full h-full object-center">{% endblock %}
+{% block text %}{{ about_the_shop.content }}{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "default.html" %}
+{% block content %}
+<div class="relative md:bg-gradient-to-b from-aqua to-aqua-darker overflow-hidden lg:pt-10">
+  <div class="max-w-7xl mx-auto relative pb-20 sm:pb-56 bg-white md:bg-transparent md:flex">
+    <img src="/static/img/birds-white.png" alt="Line art illustration of birds" class="hidden lg:block absolute w-full max-w-xl top-0 -right-8">
+    <div class="w-full relative px-4 sm:px-6 lg:px-8 lg:max-w-1/2 self-baseline">
+      <img src="/static/img/panther-white.png" alt="Line art illustration of a panther" class="hidden md:block absolute w-full max-w-sm top-3/4 right-36 opacity-80">
+      <div class="absolute inset-x-0 top-0 md:hidden h-1/2 sm:bg-aqua"></div>
+      <div class="h-96 lg:h-full overflow-hidden relative rounded-xl">
+        {% block image %}{% endblock %}
+      </div>
+    </div>
+    <div class="bg-white md:bg-transparent px-4 sm:px-6 lg:px-8 relative">
+      <h1 class="font-subheading mt-8 text-3xl sm:text-5xl md:text-aqua-darkest lg:text-7xl">{% block title %}{% endblock %}</h1>
+      <div class="bg-white rounded-xl overflow-hidden prose mt-6 md:-ml-52 md:p-8">
+        {% block text %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

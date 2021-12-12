@@ -58,7 +58,7 @@ collections:
             widget: markdown
       - label: "About the Shop"
         name: about
-        file: "src/_data/about-the-shop.yaml"
+        file: "src/_data/about_the_shop.yaml"
         fields:
           - label: "Page Title"
             name: title
@@ -68,7 +68,7 @@ collections:
             widget: markdown
       - label: "Tattoo Care"
         name: care
-        file: "src/_data/tattoo-care.yaml"
+        file: "src/_data/tattoo_care.yaml"
         fields:
           - label: "Page Title"
             name: title

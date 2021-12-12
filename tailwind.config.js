@@ -14,6 +14,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      maxWidth: {
+        '1/2': '50%',
+      },
       colors: {
         bush: {
           DEFAULT: '#d99a3d',
