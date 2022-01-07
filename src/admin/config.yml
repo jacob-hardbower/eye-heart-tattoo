@@ -82,6 +82,23 @@ collections:
           - label: "Content"
             name: content
             widget: markdown
+      - label: "Merch Store"
+        name: store
+        file: "src/_data/store.yaml"
+        fields:
+          - label: "Page Title"
+            name: title
+            widget: string
+          - label: "Content"
+            name: content
+            widget: markdown
+            required: false
+          - label: "Element"
+            name: element
+            widget: "code"
+          - label: "Script"
+            name: shopify_script
+            widget: "code"
   - label: "Settings"
     name: "settings"
     editor:
