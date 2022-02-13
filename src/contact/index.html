@@ -28,8 +28,8 @@ layout: default
         <a href="/book/" class="block font-handwriting uppercase text-bush p-2 hover:text-bush-dark transition-all group">Book Now <span class="transform transition-all group-hover:ml-4">&rarr;</span></a>
       </div>
       <div class="font-bold leading-8 text-md mt-3">
-        <a href="https://google.com/maps/dir//eye+heart+tattoo+raleigh" target="_blank" class="block font-handwriting uppercase text-base">430 S Dawson St,<br /> Raleigh, NC 27601</a>
-        <a href="tel:919-803-2046" target="_blank" class="block font-handwriting uppercase text-base mt-4">(919) 803-2046</a>
+        <a href="https://google.com/maps/dir//eye+heart+tattoo+raleigh" target="_blank" class="block font-handwriting uppercase text-base">{{ contact.address_one }},<br /> {{ contact.address_two }}</a>
+        <a href="tel:{{ contact.phone }}" target="_blank" class="block font-handwriting uppercase text-base mt-4">{{ contact.phone }}</a>
         <a target="_blank" href="/static/img/eye-heart-tattoo-parking-map.png" class="whitespace-nowrap font-handwriting uppercase inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sunset hover:bg-sunset-dark mt-6">
           Parking Map
         </a>

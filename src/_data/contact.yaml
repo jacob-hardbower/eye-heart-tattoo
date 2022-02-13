@@ -1,0 +1,8 @@
+phone: (919) 803-2046
+address_one: 430 S Dawson St
+address_two: Raleigh, NC 27601
+hours:
+  - days: Tuesday - Saturday
+    hours: 11:00AM - 7:00PM
+  - days: Sunday & Monday
+    hours: Appointment Only

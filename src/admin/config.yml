@@ -99,39 +99,27 @@ collections:
           - label: "Script"
             name: shopify_script
             widget: "code"
-  - label: "Settings"
+  - label: "Global Settings"
     name: "settings"
     editor:
       preview: false
     files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.yaml"
+      - label: "Contact Info"
+        name: "contact"
+        file: "src/_data/contact.yaml"
         fields:
-          - label: Nav Items
-            name: items
-            widget: list
-            allow_add: false
-            collapsed: false
+          - label: "Phone Number"
+            name: phone
+            widget: string
+          - label: "Address Line 1"
+            name: address_one
+            widget: string
+          - label: "Address Line 2"
+            name: address_two
+            widget: string
+          - label: "Hours"
+            name: "hours"
+            widget: "list"
             fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
-        fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.yaml"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+              - { label: Day(s), name: days, widget: string }
+              - { label: Hours, name: hours, widget: string }

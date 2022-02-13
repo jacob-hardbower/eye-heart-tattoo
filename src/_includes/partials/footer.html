@@ -6,22 +6,20 @@
           Walk-in Hours
         </h3>
         <ul role="list" class="space-y-4 font-handwriting uppercase">
+          {% for item in contact.hours %}
           <li class="text-base text-gray-300">
-            <strong>Tuesday - Saturday:</strong><br />
-            11:00am - 7:00pm
+            <strong>{{ item.days }}:</strong><br />
+            {{ item.hours }}
           </li>
-          <li class="text-base text-gray-300">
-            Sunday & Monday:<br />
-            Appointment only
-          </li>
+          {% endfor %}
         </ul>
       </div>
       <div class="basis-44">
         <h3 class="mb-4 text-sm font-subheading text-gray-400 tracking-wider uppercase">
           Contact
         </h3>
-        <a href="https://google.com/maps/dir//eye+heart+tattoo+raleigh" target="_blank" class="block font-handwriting uppercase text-base text-gray-300">430 S Dawson St,<br /> Raleigh, NC 27601</a>
-        <a href="tel:919-803-2046" target="_blank" class="block font-handwriting uppercase text-base text-gray-300 mt-4">(919) 803-2046</a>
+        <a href="https://google.com/maps/dir//eye+heart+tattoo+raleigh" target="_blank" class="block font-handwriting uppercase text-base text-gray-300">{{ contact.address_one }},<br /> {{ contact.address_two }}</a>
+        <a href="tel:{{ contact.phone }}" target="_blank" class="block font-handwriting uppercase text-base text-gray-300 mt-4">{{ contact.phone }}</a>
       </div>
       <div class="basis-24">
         <h3 class="mb-4 text-sm font-subheading text-gray-400 tracking-wider uppercase">
