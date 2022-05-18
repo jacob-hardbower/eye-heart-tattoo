@@ -14,7 +14,7 @@ bio: >-
   Lastly, she firmly believes tattooing is a magical, empowering act that must be done with the utmost love and respect. 
 
 
-  If you would like to book with Gabi you can do so through her booking link below.
+  If you would like to book with Gabi you can do so through her booking link. 
 instagram: https://www.instagram.com/gabbutattoo/
 email: GABBUBOOKING@GMAIL.COM
 booking: https://www.tattoosbygabbu.com/booking
