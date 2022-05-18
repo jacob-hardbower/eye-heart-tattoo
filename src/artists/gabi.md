@@ -1,6 +1,6 @@
 ---
 name: Gabi
-role: Artist
+role: Tattoo Artist
 photo: /static/img/78418ade-7fa3-477d-a973-4de09d6527f5.jpg
 bio: >-
   Gabi is a Georgia-born, Colombian-Italian peach who travels up & down the east
