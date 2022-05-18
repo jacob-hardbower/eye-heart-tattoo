@@ -15,7 +15,7 @@ bio: >-
 
 
   If you would like to book with Gabi you can do so through her booking link. 
-instagram: https://instagram.com/gabbutattoo?igshid=YmMyMTA2M2Y=
+instagram: gabbutattoo
 email: GABBUBOOKING@GMAIL.COM
 booking: https://www.tattoosbygabbu.com/booking
 galleryImages:
