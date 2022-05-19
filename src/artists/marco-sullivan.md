@@ -8,7 +8,7 @@ bio: "Marco began tattooing in Raleigh in 1997. He has done extensive traveling
   in traditional tattoo designs with his illustrative creativity, black and grey
   and Polynesian. "
 instagram: sugarfreesharko73
-email: sugarfreesharko73@gmail.com
+email: eyehearttattoo@gmail.com
 galleryImages:
   - image: /static/img/marco-leg-tattoo.jpg
   - image: /static/img/marco-vase-tattoo.jpg
