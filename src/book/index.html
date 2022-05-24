@@ -30,11 +30,9 @@ layout: default
           <label for="artist" class="block text-sm font-subheading text-sunset mt-4">Preferred Artist</label>
           <select id="artist" name="preferred_artist" class="mt-1 block w-full pl-3 font-bold pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-bush focus:border-bush sm:text-sm rounded-md">
             <option selected>None</option>
-            <option>Donovan Marlow</option>
-            <option>Gabi</option>
-            <option>Joe Almquist</option>
-            <option>Marco Sullivan</option>
-            <option>Scott Denhalter</option>
+            {% for artist in collections.artists %}
+            <option>{{ artist.data.name }}</option>
+            {% endfor %}
           </select>
         </div>
         <label for="message" class="block text-sm font-subheading text-sunset mt-4">Brief description of work to be done</label>
