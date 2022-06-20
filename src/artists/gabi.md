@@ -16,7 +16,7 @@ bio: >-
 
   If you would like to book with Gabi you can do so through her booking link. 
 instagram: gabbutattoo
-email: GABBUBOOKING@GMAIL.COM
+email: EYEHEARTTATTOO@GMAIL.COM
 booking: https://www.tattoosbygabbu.com/booking
 galleryImages:
   - image: /static/img/ed1fbe27-5c27-4bc6-b132-75e8a880ae79.jpg
