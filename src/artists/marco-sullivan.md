@@ -14,5 +14,5 @@ galleryImages:
   - image: /static/img/marco-vase-tattoo.jpg
   - image: /static/img/marco-maul-tattoo.jpg
   - image: /static/img/marco-leia-tattoo.jpg
-order: 3
+order: 2
 ---
