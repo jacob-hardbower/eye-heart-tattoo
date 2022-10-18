@@ -24,5 +24,5 @@ galleryImages:
   - image: /static/img/da10e212-e09c-4fc0-92e1-90596f09d953.jpg
   - image: /static/img/8893f4a4-908a-45fa-9fb2-1bb1741fcaeb.jpg
   - image: /static/img/14e6e94a-8a5c-4aa4-8dd1-5d6d7c202ded.jpg
-order: 5
+order: 3
 ---
