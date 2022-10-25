@@ -9,7 +9,7 @@ bio: >-
   traditional designs in both one shot and large scale form.
 
 
-  ***Joe's books for 2022 are closed***
+  ***Joe's books are currently closed***
 instagram: joe.almquist.tattoo
 email: joealmquist.tattoos@gmail.com
 booking: https://almquisttattoos.com/consult/
