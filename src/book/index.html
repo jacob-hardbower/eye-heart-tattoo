@@ -13,21 +13,27 @@ layout: default
     <div class="text-center sm:text-left p-12 sm:w-1/2">
       <h1 class="font-subheading text-3xl sm:text-5xl text-sunset">Book a Consult</h1>
       <p class="font-handwriting uppercase">Submit the following information and we will reach out shortly with a response and/or request for reference imagery. Thank you!</p>
-      <form action="https://usebasin.com/f/50a967c3162b" method="POST" id="my-contact-form" class="mt-6 text-left">
-        <label for="name" class="block text-sm mt-4 font-subheading text-sunset">Name</label>
-        <div class="mt-1">
-          <input required type="text" name="name" id="name" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+      <form action="https://usebasin.com/f/50a967c3162b" method="POST" id="my-contact-form" class="mt-6 text-left flex flex-wrap gap-6">
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="name" class="block text-sm font-subheading text-sunset">Name</label>
+          <div class="mt-1">
+            <input required type="text" name="name" id="name" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
         </div>
-        <label for="email" class="block text-sm font-subheading text-sunset mt-4">Email</label>
-        <div class="mt-1">
-          <input required type="email" name="email" id="email" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="email" class="block text-sm font-subheading text-sunset">Email</label>
+          <div class="mt-1">
+            <input required type="email" name="email" id="email" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
         </div>
-        <label for="phone" class="block text-sm font-subheading text-sunset mt-4">Phone</label>
-        <div class="mt-1">
-          <input required type="text" name="phone" id="phone" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="phone" class="block text-sm font-subheading text-sunset">Phone</label>
+          <div class="mt-1">
+            <input required type="text" name="phone" id="phone" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
         </div>
-        <div>
-          <label for="artist" class="block text-sm font-subheading text-sunset mt-4">Preferred Artist</label>
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="artist" class="block text-sm font-subheading text-sunset">Preferred Artist</label>
           <select id="artist" name="preferred_artist" class="mt-1 block w-full pl-3 font-bold pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-bush focus:border-bush sm:text-sm rounded-md">
             <option selected>None</option>
             {% for artist in collections.artists %}
@@ -35,13 +41,42 @@ layout: default
             {% endfor %}
           </select>
         </div>
-        <label for="message" class="block text-sm font-subheading text-sunset mt-4">Brief description of work to be done</label>
-        <div class="mt-1">
-          <textarea name="message" id="message" cols="30" rows="4" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="size" class="block text-sm font-subheading text-sunset">Tattoo Size</label>
+          <div class="mt-1">
+            <input required type="text" name="size" id="size" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
         </div>
-        <div class="flex gap-x-4 mt-6 items-center">
-          <button type="submit" class="whitespace-nowrap font-handwriting uppercase inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sunset hover:bg-sunset-dark">Submit</button>
-          <div class="font-subheading text-bush" id="form-message"></div>
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="tattoo_type" class="block text-sm font-subheading text-sunset">Tattoo Type</label>
+          <select id="tattoo_type" name="tattoo_type" class="mt-1 block w-full pl-3 font-bold pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-bush focus:border-bush sm:text-sm rounded-md">
+            <option selected>Color</option>
+            <option>Black/Gray</option>
+          </select>
+        </div>
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="placement" class="block text-sm font-subheading text-sunset">Tattoo Placement</label>
+          <div class="mt-1">
+            <input required type="text" name="placement" id="placement" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
+        </div>
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="budget" class="block text-sm font-subheading text-sunset">Budget (optional)</label>
+          <div class="mt-1">
+            <input type="text" name="budget" id="budget" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md">
+          </div>
+        </div>
+        <div class="basis-44 flex-grow-[99999]">
+          <label for="description" class="block text-sm font-subheading text-sunset">Tattoo Description</label>
+          <div class="mt-1">
+            <textarea name="description" id="description" cols="30" rows="4" class="font-bold shadow-sm focus:ring-bush focus:border-bush block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+          </div>
+        </div>
+        <div class="w-full flex-grow-[99999]">        
+          <div class="flex gap-x-4 items-center">
+            <button type="submit" class="whitespace-nowrap font-handwriting uppercase inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sunset hover:bg-sunset-dark">Submit</button>
+            <div class="font-subheading text-bush" id="form-message"></div>
+          </div>
         </div>
         </form>
     </div>
