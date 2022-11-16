@@ -95,6 +95,7 @@ layout: default
       console.log(xhr);
       if (xhr.status === 200) {
         formMessage.innerHTML = "Success!";
+        form.reset()
       } else {
         formMessage.innerHTML = "Error: " + response.error;
       }
