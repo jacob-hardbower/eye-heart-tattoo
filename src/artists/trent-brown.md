@@ -4,7 +4,7 @@ role: Artist
 photo: /static/img/img_0588.jpg
 bio: Trent is a North Carolina native whose been tattooing since 2019. He's at
   the shop Thursdays - Saturdays for all your walk-in needs.
-instagram: "@trentbrowntattoo"
+instagram: trentbrowntattoo
 email: eyehearttattoo@gmail.com
 galleryImages:
   - image: /static/img/img_0589.jpg
