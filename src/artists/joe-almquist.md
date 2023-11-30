@@ -15,7 +15,7 @@ bio: >+
 
 instagram: joe.almquist.tattoo
 email: joealmquist.tattoos@gmail.com
-booking: https://EyeHeartTattoo.as.me/joe
+booking: almquisttattoos.com
 galleryImages:
   - image: /static/img/almquist-party-pup-tattoo.jpg
   - image: /static/img/almquist-snake-leg-tattoo.jpg
