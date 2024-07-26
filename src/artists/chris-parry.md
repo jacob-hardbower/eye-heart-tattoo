@@ -29,5 +29,5 @@ galleryImages:
   - image: /static/img/img_1959.heic
   - image: /static/img/img_1961.heic
   - image: /static/img/img_1960.heic
-order: 5
+order: 4
 ---
