@@ -27,5 +27,5 @@ galleryImages:
   - image: /static/img/img_1957.heic
   - image: /static/img/img_1958.heic
   - image: /static/img/img_1955.heic
-order: 5
+order: 3
 ---
