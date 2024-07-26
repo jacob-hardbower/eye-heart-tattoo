@@ -14,20 +14,20 @@ instagram: Chris_sinister
 email: chrisparry.bookings@elev8mc.com
 booking: chrisparrytattoos.com/booking
 galleryImages:
-  - image: /static/img/img_1945.heic
-  - image: /static/img/img_1946.heic
-  - image: /static/img/img_1947.heic
-  - image: /static/img/img_1948.heic
-  - image: /static/img/img_1949.heic
-  - image: /static/img/img_1950.heic
-  - image: /static/img/img_1952.heic
   - image: /static/img/img_1953.heic
+  - image: /static/img/img_1949.heic
+  - image: /static/img/img_1945.heic
+  - image: /static/img/img_1960.heic
+  - image: /static/img/img_1946.heic
+  - image: /static/img/img_1950.heic
   - image: /static/img/img_1954.heic
-  - image: /static/img/img_1955.heic
+  - image: /static/img/img_1961.heic
+  - image: /static/img/img_1959.heic
+  - image: /static/img/img_1948.heic
+  - image: /static/img/img_1952.heic
+  - image: /static/img/img_1947.heic
   - image: /static/img/img_1957.heic
   - image: /static/img/img_1958.heic
-  - image: /static/img/img_1959.heic
-  - image: /static/img/img_1961.heic
-  - image: /static/img/img_1960.heic
+  - image: /static/img/img_1955.heic
 order: 4
 ---
