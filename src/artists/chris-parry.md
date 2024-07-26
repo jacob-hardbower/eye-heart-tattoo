@@ -4,9 +4,7 @@ role: Artist
 photo: /static/img/img_1951.heic
 bio: Chris Has been tattooing since the mid 90's. He attended Savannah College
   of Art and Design and Armstrong State College where He studied illustration
-  and printmaking. His main influences for making art come from his love of 80’s
-  skateboard graphics, punk rock and heavy metal album art, and fantasy
-  illustration. He enjoys incorporating illustrative style into his tattoo
+  and printmaking. He enjoys incorporating illustrative style into his tattoo
   designs. He prefers to do one-of-a-kind, custom tattoo work. His preferred
   styles and subject matter to work with for tattooing are illustrative,
   neo-traditional, fantasy, pop art, horror, dark art, floral, and psychedelic
