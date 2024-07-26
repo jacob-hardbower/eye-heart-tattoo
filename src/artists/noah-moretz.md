@@ -25,5 +25,5 @@ galleryImages:
   - image: /static/img/img_1315.jpeg
   - image: /static/img/img_1269.jpeg
   - image: /static/img/img_1039.jpeg
-order: 4
+order: 3
 ---
