@@ -10,7 +10,7 @@ bio: Chris Has been tattooing since the mid 90's. He attended Savannah College
   neo-traditional, fantasy, pop art, horror, dark art, floral, and psychedelic
 instagram: Chris_sinister
 email: chrisparry.bookings@elev8mc.com
-booking: chrisparrytattoos.com/booking
+booking: www.chrisparrytattoos.com/booking
 galleryImages:
   - image: /static/img/img_1953.heic
   - image: /static/img/img_1949.heic
