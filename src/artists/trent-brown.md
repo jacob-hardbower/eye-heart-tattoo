@@ -12,5 +12,5 @@ galleryImages:
   - image: /static/img/img_0591.jpg
   - image: /static/img/img_0592.jpg
   - image: /static/img/img_0593.jpg
-order: 6
+order: 4
 ---
