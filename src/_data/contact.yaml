@@ -4,3 +4,5 @@ address_two: Raleigh, NC 27601
 hours:
   - days: Tuesday - Saturday
     hours: 11:00AM - 7:00PM
+  - days: Sunday
+    hours: 12:00PM - 5:00PM
